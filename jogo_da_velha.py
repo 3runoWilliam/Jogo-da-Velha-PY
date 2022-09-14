@@ -1,7 +1,7 @@
-
-from time import sleep
-from random import randint
 import sys
+from distutils.command.clean import clean
+from random import randint
+from time import sleep
 
 pts_jogador = 0
 pts_pc = 0
@@ -26,15 +26,15 @@ Quando for sua vez, digite o número correspondente à posição no tabuleiro pa
 
 Por exemplo, digamos que você queira jogar no centro, então você digita 5.
 
-     |     |     
-  1  |  2  |  3  
-_____|_____|_____
-     |     |     
-  4  |  5  |  6  
-_____|_____|_____
-     |     |     
-  7  |  8  |  9  
-     |     |     
+                                    |     |     
+                                 1  |  2  |  3  
+                               _____|_____|_____
+                                    |     |     
+                                 4  |  5  |  6  
+                               _____|_____|_____
+                                    |     |     
+                                 7  |  8  |  9  
+                                    |     |     
     '''
 
     print(tabuleiro_inicial)
@@ -69,15 +69,15 @@ _____|_____|_____
     def atualizar_tabuleiro():
         global p1, p2, p3, p4, p5, p6, p7, p8, p9
         tabuleiro = '''
-     |     |   
-  {}  |  {}  |  {}
-_____|_____|_____
-     |     |
-  {}  |  {}  |  {}
-_____|_____|_____
-     |     |
-  {}  |  {}  |  {}
-     |     |
+                                     |     |   
+                                  {}  |  {}  |  {}
+                                _____|_____|_____
+                                     |     |
+                                  {}  |  {}  |  {}
+                                _____|_____|_____
+                                     |     |
+                                  {}  |  {}  |  {}
+                                     |     |
         '''.format(p1, p2, p3, p4, p5, p6, p7, p8, p9)
         print(tabuleiro)
 
@@ -86,7 +86,25 @@ _____|_____|_____
 
         while True:
             try:
+                print('---------------------TABULEIRO COM OS NUMEROS-------------------')
+                print('''
+                                     |     |     
+                                  1  |  2  |  3  
+                                _____|_____|_____
+                                     |     |     
+                                  4  |  5  |  6  
+                                _____|_____|_____
+                                     |     |     
+                                  7  |  8  |  9  
+                                     |     |     
+                ''')
+                print('----------------------------------------------------------------')
+
                 jogada = int(input('Digite a posição da sua jogada (1 a 9) e pressione Enter: '))
+
+                import os
+                print("\n" * os.get_terminal_size().lines)
+
                 break
             except ValueError:
                 print('\nValor digitado inválido. Digite um número inteiro de 1 a 9!\n')
