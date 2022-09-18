@@ -20,6 +20,7 @@ while True:
     vencedor = ''
 
     tabuleiro_inicial = '''
+    
 --- COMO JOGAR ---
 
 Quando for sua vez, digite o número correspondente à posição no tabuleiro para fazer sua jogada nela.
@@ -86,6 +87,7 @@ Por exemplo, digamos que você queira jogar no centro, então você digita 5.
 
         while True:
             try:
+                
                 print('---------------------TABULEIRO COM OS NUMEROS-------------------')
                 print('''
                                      |     |     
@@ -107,9 +109,11 @@ Por exemplo, digamos que você queira jogar no centro, então você digita 5.
 
                 break
             except ValueError:
+                
                 print('\nValor digitado inválido. Digite um número inteiro de 1 a 9!\n')
 
     def rotina_j1():
+        
         global jogada
         global pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9
 
@@ -136,6 +140,7 @@ Por exemplo, digamos que você queira jogar no centro, então você digita 5.
             rotina_j1()
 
     def atualizar_jogadas_j1():
+        
         global jogada
         global p1, p2, p3, p4, p5, p6, p7, p8, p9
         global pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9
