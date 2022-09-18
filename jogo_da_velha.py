@@ -254,6 +254,7 @@ Por exemplo, digamos que você queira jogar no centro, então você digita 5.
             turnos = 10
 
     def atualizar_tudo():
+        
         global jogada
         global turnos
         global vencedor
