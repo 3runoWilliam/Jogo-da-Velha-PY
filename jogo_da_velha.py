@@ -313,3 +313,5 @@ Por exemplo, digamos que você queira jogar no centro, então você digita 5.
         continue
     else:
         sys.exit(0)
+        
+        
